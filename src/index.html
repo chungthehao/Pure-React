@@ -26,26 +26,28 @@
         ]);
       };
 
-      const App = props => {
-        return React.createElement('div', {}, [
-          React.createElement('h1', { key: 0 }, 'React is rendered!!!'),
-          React.createElement(Person, {
-            key: 1,
-            name: 'Henry',
-            occupation: 'Developer'
-          }),
-          React.createElement(Person, {
-            key: 2,
-            name: 'Yihua',
-            occupation: 'Developer'
-          }),
-          React.createElement(Person, {
-            key: 3,
-            name: 'Andrei',
-            occupation: 'Instructor'
-          })
-        ]);
-      };
+      class App extends React.Component {
+        render() {
+          return React.createElement('div', {}, [
+            React.createElement('h1', { key: 0 }, 'React is rendered!!!'),
+            React.createElement(Person, {
+              key: 1,
+              name: 'Henry',
+              occupation: 'Developer'
+            }),
+            React.createElement(Person, {
+              key: 2,
+              name: 'Yihua',
+              occupation: 'Developer'
+            }),
+            React.createElement(Person, {
+              key: 3,
+              name: 'Andrei',
+              occupation: 'Instructor'
+            })
+          ]);
+        }
+      }
 
       ReactDOM.render(
         React.createElement(App),
